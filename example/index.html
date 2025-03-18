@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: #f0f2f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      margin: 0 0 20px;
+      color: #333;
+    }
+    h2 {
+      margin: 0 0 15px;
+      color: #666;
+    }
+    .color-display {
+      width: 100px;
+      height: 100px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+  </style>
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Color Picker Demo</h1>
+    
+    <div class="demo-section">
+      <h2>Solid Color Picker</h2>
+      <div id="solid-picker"></div>
+      <div id="solid-color" class="color-display"></div>
+    </div>
+
+    <div class="demo-section">
+      <h2>Gradient Color Picker</h2>
+      <div id="gradient-picker"></div>
+      <div id="gradient-color" class="color-display"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import ColorPicker from '../src/index.js';
+
+    // Solid color picker
+    const solidPicker = new ColorPicker('#solid-picker', {
+      color: '#ff0000',
+      onChange: (color) => {
+        document.getElementById('solid-color').style.backgroundColor = color;
+      }
+    });
+
+    // Gradient color picker
+    const gradientPicker = new ColorPicker('#gradient-picker', {
+      mode: 'gradient',
+      onChange: (gradient) => {
+        document.getElementById('gradient-color').style.background = gradient;
+      }
+    });
+  </script>
+</body>
+</html> 

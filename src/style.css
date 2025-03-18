@@ -1,0 +1,287 @@
+.color-picker {
+  width: 280px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  padding: 20px;
+}
+
+/* Mode Tabs */
+.cp-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cp-tab {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.cp-tab:hover {
+  color: #333;
+}
+
+.cp-tab.active {
+  color: #1890ff;
+  border-bottom: 2px solid #1890ff;
+}
+
+/* Color Input */
+.cp-color-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cp-color-view {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cp-color-text {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.cp-color-value {
+  flex: 1;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cp-eyedropper {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cp-eyedropper:hover {
+  border-color: #1890ff;
+}
+
+.cp-eyedropper-icon {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+/* Color Palette */
+.cp-solid,
+.cp-gradient {
+  margin-bottom: 15px;
+}
+
+.cp-palette {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.cp-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.cp-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #000);
+  pointer-events: none;
+}
+
+.cp-cursor {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin: -6px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hue Slider */
+.cp-hue {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cp-hue-cursor {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border-radius: 6px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  background: #fff;
+  z-index: 1;
+}
+
+.cp-hue-cursor .circle {
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* Gradient Controls */
+.cp-gradient-type-controls {
+  margin-bottom: 15px;
+}
+
+.cp-gradient-angle {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.cp-angle-input {
+  width: 60px;
+  height: 24px;
+  margin: 0 8px;
+  padding: 0 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cp-gradient-bar {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 15px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cp-gradient-bar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+}
+
+.cp-gradient-stop {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.cp-gradient-stop-color {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s;
+}
+
+.cp-gradient-stop.active .cp-gradient-stop-color {
+  transform: scale(1.2);
+}
+
+/* Presets */
+.cp-presets {
+  margin-top: 15px;
+}
+
+.cp-preset-label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.cp-preset-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cp-preset-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cp-preset-color:hover {
+  transform: scale(1.1);
+}
+
+/* Recent Colors */
+.cp-recent {
+  margin-top: 15px;
+}
+
+/* Gradient Stop Panel */
+.cp-gradient-stop-panel {
+  margin-top: 15px;
+}
+
+.cp-gradient-stop-panel .cp-palette,
+.cp-gradient-stop-panel .cp-hue {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .color-picker {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+} 

@@ -1,0 +1,44 @@
+{
+  "name": "@edy/color-picker",
+  "version": "1.0.0",
+  "description": "A framework-agnostic color picker with support for solid colors and gradients",
+  "type": "module",
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "types"
+  ],
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "color-picker",
+    "color-wheel",
+    "gradient",
+    "javascript",
+    "vanilla-js"
+  ],
+  "author": "edy",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.5.2",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
