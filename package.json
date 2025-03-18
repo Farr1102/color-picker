@@ -23,20 +23,23 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "changelog": "conventional-changelog -p -i CHANGELOG.md -s"
   },
   "keywords": [
     "color-picker",
     "color-wheel",
     "gradient",
     "javascript",
-    "vanilla-js"
+    "vanilla-js",
+    "vite"
   ],
   "author": "edy",
   "license": "MIT",
   "devDependencies": {
-    "vite": "^4.5.2",
-    "typescript": "^5.3.3"
+    "conventional-changelog-cli": "^5.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^4.5.2"
   },
   "publishConfig": {
     "access": "public"
