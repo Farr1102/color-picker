@@ -1,6 +1,6 @@
 {
   "name": "color-picker-native",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A framework-agnostic color picker with support for solid colors and gradients",
   "type": "module",
   "files": [
