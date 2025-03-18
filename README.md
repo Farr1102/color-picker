@@ -1,4 +1,4 @@
-# @edy/color-picker
+# color-picker-native
 
 A lightweight, framework-agnostic color picker with support for solid colors and gradients.
 
@@ -15,9 +15,9 @@ A lightweight, framework-agnostic color picker with support for solid colors and
 ## Installation
 
 ```bash
-npm install @edy/color-picker
+npm install color-picker-native
 # or
-yarn add @edy/color-picker
+yarn add color-picker-native
 ```
 
 ## Usage
@@ -25,8 +25,8 @@ yarn add @edy/color-picker
 ### ES Module
 
 ```javascript
-import ColorPicker from '@edy/color-picker';
-import '@edy/color-picker/style.css';
+import ColorPicker from 'color-picker-native';
+import 'color-picker-native/style.css';
 
 // Create a solid color picker
 const picker = new ColorPicker('#container', {
@@ -48,9 +48,9 @@ const gradientPicker = new ColorPicker('#container', {
 ### Browser
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@edy/color-picker/dist/style.css">
+<link rel="stylesheet" href="https://unpkg.com/color-picker-native@1.0.1/es/style.css">
 <script type="module">
-  import ColorPicker from 'https://unpkg.com/@edy/color-picker/dist/color-picker.js';
+  import ColorPicker from 'https://unpkg.com/color-picker-native@1.0.1/es/ColorPicker.js';
   
   const picker = new ColorPicker('#container', {
     color: '#ff0000'

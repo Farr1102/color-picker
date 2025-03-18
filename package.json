@@ -1,6 +1,6 @@
 {
-  "name": "@edy/color-picker",
-  "version": "1.0.0",
+  "name": "color-picker-native",
+  "version": "1.0.1",
   "description": "A framework-agnostic color picker with support for solid colors and gradients",
   "type": "module",
   "files": [
@@ -42,6 +42,6 @@
     "vite": "^4.5.2"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/"
   }
 }
